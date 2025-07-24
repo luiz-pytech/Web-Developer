@@ -46,4 +46,4 @@ Abaixo está uma visão geral de cada projeto contido neste repositório. Clique
 
 * **Luiz Felipe de Souza Silva**
     * **GitHub:** [@luiz-pytech](https://github.com/luiz-pytech)
-    * **LinkedIn:** ````
+
