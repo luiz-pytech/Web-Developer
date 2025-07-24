@@ -38,12 +38,12 @@ Bem-vindo ao mundo da Barbie! Este projeto vai além de um site estático, ofere
 | Página Inicial Temática | Central de Jogos |
 | :---: | :---: |
 | _Uma landing page vibrante com música para receber os visitantes._ | _Escolha entre três jogos diferentes para se divertir._ |
-| ![Home](https://github.com/luiz-pytech/ProjectBarbie/blob/main/public/post1.png) | ![Jogos](https://github.com/luiz-pytech/ProjectBarbie/blob/main/public/post2.png) |
+| ![Home](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjectBarbie/public/post1.png) | ![Jogos](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjectBarbie/public/post2.png) |
 
 | Quiz Interativo com Ranking | Seção de Vídeos |
 | :---: | :---: |
 | _Teste seus conhecimentos e veja sua pontuação em um ranking local._ | _Assista a episódios e clipes da Barbie sem sair do site._ |
-| ![Quiz](https://github.com/luiz-pytech/ProjectBarbie/blob/main/public/post7.png) | ![Vídeos](https://github.com/luiz-pytech/ProjectBarbie/blob/main/public/post6.png) |
+| ![Quiz](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjectBarbie/public/post7.png) | ![Vídeos](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjectBarbie/public/post6.png) |
 
 ---
 
