@@ -42,12 +42,12 @@ O sistema possui dois níveis de acesso com funcionalidades distintas:
 | Login e Cadastro | Página Inicial |
 | :---: | :---: |
 | _Sistema seguro de autenticação para acesso à plataforma._ | _Dashboard principal com acesso rápido a todas as funcionalidades._ |
-| ![Tela de Login](https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/post13.jpg) | ![Home](https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/post1.png) |
+| ![Tela de Login](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post13.png) | ![Home](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post1.png) |
 
 | Perfil do Usuário | Sobre o Projeto |
 | :---: | :---: |
 | _Área para gerenciar informações pessoais, foto e ver o ranking de doações._ | _Seção informativa que detalha a missão e o impacto do projeto._ |
-| ![Perfil do Usuário](https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/post9.png) | ![Sobre](https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/post4.png) |
+| ![Perfil do Usuário](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post9.png) | ![Sobre](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post4.png) |
 
 </details>
 
@@ -58,7 +58,7 @@ O sistema possui dois níveis de acesso com funcionalidades distintas:
 | Gerenciamento de Usuários | Gerenciamento de Doações |
 | :---: | :---: |
 | _Acesso a uma lista completa de usuários com opções de CRUD (Criar, Ler, Atualizar, Deletar)._ | _Visualização de todas as doações realizadas na plataforma._ |
-| ![Gerenciar Usuários](https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/post10.png) | ![Gerenciar Doações](https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/post11.png) |
+| ![Gerenciar Usuários](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post10.png) | ![Gerenciar Doações](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post11.png) |
 
 </details>
 
@@ -120,7 +120,8 @@ Siga os passos abaixo para configurar e rodar o projeto:
 ## ✍️ Autores
 
 -   **Luiz Felipe de Souza Silva** - [GitHub](https://github.com/luiz-pytech)
--   **Ariane Selli Melo de Souza** - [GitHub](https://github.com/Arianeselli) ---
+-   **Ariane Selli Melo de Souza** - [GitHub](https://github.com/Arianeselli)
+---
 
 ## 📄 Licença
 
