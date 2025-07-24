@@ -42,7 +42,7 @@ O sistema possui dois níveis de acesso com funcionalidades distintas:
 | Login e Cadastro | Página Inicial |
 | :---: | :---: |
 | _Sistema seguro de autenticação para acesso à plataforma._ | _Dashboard principal com acesso rápido a todas as funcionalidades._ |
-| ![Tela de Login](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post13.png) | ![Home](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post1.png) |
+| ![Tela de Login](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post13.jpg) | ![Home](https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/post1.png) |
 
 | Perfil do Usuário | Sobre o Projeto |
 | :---: | :---: |
