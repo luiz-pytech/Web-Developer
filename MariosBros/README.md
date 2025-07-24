@@ -38,12 +38,12 @@ O **Mario Bros World** é um portal feito por fãs para fãs. Criado para pratic
 | Página Inicial | Seção de Jogos |
 | :---: | :---: |
 | _Uma landing page atrativa que serve como portal para todas as seções._ | _Divirta-se com um jogo da memória temático e acesse outros jogos._ |
-| ![Tela Inicial](https://github.com/luiz-pytech/MariosBros/public/post1.png) | ![Página de Jogos](https://github.com/luiz-pytech/MariosBros/public/post2.png) |
+| ![Tela Inicial](https://github.com/luiz-pytech/Web-Developer/blob/main/MariosBros/public/post1.png) | ![Página de Jogos](https://github.com/luiz-pytech/Web-Developer/blob/main/MariosBros/public/post2.png) |
 
 | Biografias dos Personagens | Página de Contato |
 | :---: | :---: |
 | _Conheça mais sobre a história dos seus personagens favoritos._ | _Uma área para apresentar os criadores do projeto._ |
-| ![Biografias](https://github.com/luiz-pytech/MariosBros/public/post3.png) | ![Idealizadores](https://github.com/luiz-pytech/MariosBros/public/post4.png) |
+| ![Biografias](https://github.com/luiz-pytech/Web-Developer/blob/main/MariosBros/public/post3.png) | ![Idealizadores](https://github.com/luiz-pytech/Web-Developer/blob/main/MariosBros/public/post4.png) |
 
 ---
 
