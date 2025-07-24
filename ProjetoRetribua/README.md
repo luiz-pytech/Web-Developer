@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/luiz-pytech/ProjetoRetribua/blob/main/public/logobranca.png" alt="Logo Retribua" width="450"/>
+  <img src="https://github.com/luiz-pytech/Web-Developer/blob/main/ProjetoRetribua/public/logobranca.png" alt="Logo Retribua" width="450"/>
 </div>
 
 # Projeto Retribua
