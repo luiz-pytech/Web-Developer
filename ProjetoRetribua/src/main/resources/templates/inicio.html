@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/layout}">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,, shrink-to-fit=no">
+	   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="sortcut icon" href="img/icon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<title>Retribua</title>
+	
+	
+</head>
+<body>
+
+	<div layout:fragment = "corpo">
+		
+		<div th:replace = "fragments/mensagens"> </div>
+		
+        <div class="hero">
+            <section class="hero-section pl-5 d-flex justify-content-center align-items-center flex-wrap">
+                <div class="container-item mt-5 ">
+                    <div><h1 class="mr-5">Retribua</h1></div>
+                    <div><h3 class="mask text-right mt-5 ">Colabore</h3></div>
+                    <div> <h3 class="mask">
+                        Faça a diferença</h3></div>
+                  
+                </div>
+                <div class="container-item mt-7 ">
+                    <img class="img-fluid" src="img/hero.png" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="hero mb-5">
+            <section class="hero-section pl-5 d-flex justify-content-center align-items-center flex-column">
+                <div><h5 class="mt-8 text-center mb-4">Nossos serviços oferecidos</h5></div>
+                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                            <h6 class="card-title">
+                                <div class="border-i">
+                                    <i class="fas fa-donate"></i>
+                                </div>
+                                <h6 class="text-center">
+                                    Doar
+                                </h6>
+                            </h6>
+                          <p class="card-text text-center">Você pode doar: carinho, atenção, tempo, recursos, alimentos, conhecimento, móveis, roupas e amor para aqueles que precisam. Faça o bem ao próximo.</p>
+                          
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                            <h6 class="card-title">
+                                <div class="border-i">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <h6 class="text-center">
+                                    Voluntário
+                                </h6>
+                            </h6>
+                          <p class="card-text text-center">Ajuda no que for preciso de acordo suas habilidades, região e ações propostas pelo colaborador responsável pela sua região. Seja um de nós.</p>
+                          
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                            <h6 class="card-title">
+                                <div class="border-i">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <h6 class="text-center">
+                                    Doador
+                                </h6>
+                            </h6>
+                          <p class="card-text text-center">Pode preencher o cadastro do que será doado e depois um colaborador mais próximo de você entrará em contato para explicar os próximos passos.
+                        </p>
+                          
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                            <h6 class="card-title">
+                                <div class="border-i">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <h6 class="text-center">
+                                    Colaborador
+                                </h6>
+                            </h6>
+                          <p class="card-text text-center">É responsável pelas ações e liderança da equipe de usuários, além da organização das doações. É o ponto de apoio da região onde mora.
+                        </p>
+                          
+                        </div>
+                      </div>
+                      
+                </div>
+            </section>
+        </div>
+        <div class="services py-6 py-md-11 border-bottom .color-gray overflow-hidden">
+            <section class="container">
+                <div class="row aligm-items justify-content-center flex-row">
+                    <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                        <h6 class="text-center" style="color:#869ab8;">        
+                            Retribua
+                        </h6>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                        <h6 class="text-center" style="color:#869ab8;">
+                            Colabore
+                        </h6>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                        <h6 class="text-center" style="color:#869ab8;">
+                            Contribua
+                        </h6>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                        <h6 class="text-center" style="color:#869ab8;">
+                            Doar
+                        </h6>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                        <h6 class="text-center" style="color:#869ab8;">                
+                            Ajude
+                        </h6>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
+                        <h6 class="text-center" style="color:#869ab8;">
+                           Voluntário
+                        </h6>
+                    </div>
+
+                    
+                </div>
+            </section>
+        </div>
+        <div class="hero-project">
+            <section class="hero-section pl-5 d-flex justify-content-center align-items-center flex-wrap mb-4">
+                <div class="container-item-project mt-5 text-center">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h1 class="text-center">Retribua</h1>
+                        <p class="text-center desc-project mt-3 px-6" style="color:#4AA77C;">
+                            O RETRIBUA é um projeto que visa tornar fácil e simples ajudar o outro, e que esse ato possa ocorrer em todos os lugares, melhorando a vida de quem precisa e oferecendo seu melhor para toda comunidade. Assim, não importa de onde seja você pode ajudar alguém, sendo colaborador, voluntário ou doador. FAÇA A DIFERENÇA.
+                        </p>
+                    </div>
+                  
+                </div>
+                <div class="container-item mt-7 ml-3 ">
+                    <img class="img-fluid" src="img/puzzle.png" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    
+
+	
+</body>
+</html>

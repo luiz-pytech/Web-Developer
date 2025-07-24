@@ -1,0 +1,127 @@
+<!doctype html>
+<html layout:decorate="~{layout/layout}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+	<link rel="stylesheet" type="text/css" href="../css/stylePerfil.css">
+
+    <title>Retribua</title>
+    <!-- Optional JavaScript; choose one of the two! -->
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
+  </head>
+  <body>
+  
+  	<div layout:fragment = "corpo">
+  	<div th:replace = "fragments/mensagens"> </div>
+        
+            <div class="content">
+              <div class="perfil">
+                <div class="id-perfil">
+                  <span style="color:#fff;" th:text="${usuarioLogado.id}"></span>
+                </div>
+                <div class="img-perfil">
+                  <img th:if="${usuarioLogado.foto != null}" th:src="@{/download/} + ${usuarioLogado.foto.id} + 
+					'?salvar=false'">
+                </div>
+                <button type="button"  class="mod-img" data-bs-toggle="modal" data-bs-target="#CadastrarFotos"> <i class="far fa-images"></i></button>
+                <h1 th:text="${usuarioLogado.nome}">
+                  
+                </h1>
+                <h4>
+                  <span th:text="${usuarioLogado.cidade}"></span> - <span th:text="${usuarioLogado.estado}"> RN </span>
+                </h4>
+                <p class="email" th:text="${usuarioLogado.email}">
+                  
+                </p>
+                <div class="stats">
+                  <div>
+                    <div class="title">Doações</div>
+                    <i class="fas fa-donate"></i>
+                    <div class="value" th:text="${#lists.size(doacoesEncontradas)}">28</div>
+                  </div>
+                  <div>
+                    <div class="title">Posição</div>
+                    <i class="fas fa-trophy"></i>
+                    <div class="value" th:text="${usuarioLogado.id}"></div>
+                  </div>
+                </div>
+                <div class="footer-card">
+                  <span style="color:#fff;" class="funcao" th:text="${usuarioLogado.perfil}"></span>
+                </div>
+              </div>
+              <div class="content-perfil-doacoes">
+                <div class="nav-perfil-doacoes">
+                    <h2>
+                      Doações
+                    </h2>
+                    <form class="d-flex"  th:action="@{/cruds/buscarDoacoes}" method="get">
+                      <input th:name="nomeDoacao" class="form-control search" type="search" placeholder="Pesquisar Doação" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <button class="perfil-colab">
+                      Tornar Colaborador
+                    </button>
+                </div>
+                <div class="perfil-doacoes">
+                  <div th:if="${not #lists.isEmpty(doacoesEncontradas)}" class="d-flex justify-content-center align-itens-center flex-wrap">
+				
+                    <div th:each="d : ${doacoesEncontradas}" class="card position-relative" style="width: 25rem;">
+                      <div class="position-absolute id d-flex justify-content-center align-itens-center">
+                        <p style="color:#fff;" th:text="${d.id}"></p>
+                      </div>
+                      <div class="card-body">
+                        <h6 style="font-size:36px" th:text="${d.nomeDoDoador}" class="card-title"></h6>
+                        <p th:text="'Doando: ' + ${d.tipo}" class="card-subtitle mb-2 text-muted"></p>
+                        <p th:text="${d.descricao}" class="card-text justify-text"></p>
+                       
+                        <div class="d-flex justify-content-center align-itens-center">
+                        
+                         <ul class="list-group list-group-horizontal">
+                            <li style="color:#869ab8;" class="list-group-item align-middle"> <a th:text=" ${d.cidade}"> </a></li>
+                            <li style="color:#869ab8;" class="list-group-item align-middle"><a th:text=" ${d.telefone}"> </a></li>
+                            <li  class="list-group-item"><a style="color:#869ab8;" th:href="'/cruds/editDoacao/' + ${d.id}"  class="d-flex flex-column align-items-center"><i class="bi bi-pen"></i>Edit</a></li>
+                            <li  class="list-group-item"><a style="color:#869ab8;" th:href="'/cruds/removerDoacao/' + ${d.id}" onclick="if (!confirm('Desejar remover o usuário?')) return false" class="d-flex flex-column align-items-center"><i class="bi bi-trash"></i>Remove</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+	       <div class="modal fade" id="CadastrarFotos" tabindex="-1" aria-labelledby="CadastrarFotos" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="CadastrarFotosLabel">Adicionar Fotxinha</h5>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			      </div>
+			      <div class="modal-body">
+			         <form th:action="@{/salvarFotos}" th:object="${usuarioLogado}" method="post" enctype="multipart/form-data" >
+						<input type="file" th:name="file">
+	                	<input type="hidden" th:field="${usuarioLogado.foto.id}"/>
+					
+			      </div>
+			      <div class="modal-footer">
+		              <button type="submit" class="btn btn-outline-success mt-2 col-12">Cadastrar</button>
+		            </div>
+		            </form>
+			    </div>
+			  </div>
+			</div>
+        </div>
+        
+  </body>
+</html>

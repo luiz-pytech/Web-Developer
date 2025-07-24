@@ -1,0 +1,14 @@
+@import '_variables';
+@import 'functionStyle';
+
+@include StartPag();
+
+.FAQ{
+    color: $white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.shadow{
+    box-shadow: 1px 20px 10px rgba(0, 0, 155, .8);
+}

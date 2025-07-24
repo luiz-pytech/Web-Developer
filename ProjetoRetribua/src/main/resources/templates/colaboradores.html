@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout/layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Colaboradores</title>
+
+    <link rel="stylesheet" href="../css/styleColab.css">
+</head>
+<body>
+<div layout:fragment="corpo">
+    <div class="content">
+             
+           
+        <h1 class="title-div">Colaboradores</h1>
+        <div class="content-colab" th:if="${not #lists.isEmpty(usuariosEncontrados)}">
+            <div class="card card-colab" th:each="u : ${usuariosEncontrados}">
+                <div class="additional colab">
+                  <div class="user-card">
+                    <div class="level center" th:text="${u.funcao}">
+                      Voluntário
+                    </div>
+                    <div class="stats">
+                        <div>
+                          <div class="title">Doações</div>
+                          <i class="fas fa-donate"></i>
+                          <div class="value" th:text="${#lists.size(u.doacoes)}">10</div>
+                        </div>
+                        <div>
+                          <div class="title">posição</div>
+                          <i class="fas fa-trophy"></i>
+                          <div class="value" th:text="${u.id}"></div>
+                        </div>
+                    </div>
+                    <div class="border-img">
+        
+                        <img class="img-colab" th:if="${u.foto != null}" th:src="@{/download/} + ${u.foto.id} + 
+					'?salvar=false'"/>
+                    </div>
+                   
+                  </div>
+                  
+                </div>
+                <div class="general">
+                  <h2 th:text="${u.nome}"></h2>
+                  <p><i class="fas fa-envelope"></i> <span class="email" th:text="${u.email}"></span></p>
+                  <p><i class="fas fa-map-marker-alt"></i> <span class="cidade" th:text="${u.cidade}"></span>, <span class="estado" th:text="${u.estado}">RN</span></p>
+                 
+                </div>
+              </div>
+           
+              
+            
+	        </div>
+	    </div>
+    </div>
+</body>
+</html>

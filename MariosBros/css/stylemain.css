@@ -1,0 +1,157 @@
+
+        .navbar{
+          /*definindo um plano de fundo*/
+            background-color: rgba(205, 4, 14);
+
+        }
+        .icon{
+          /*definindo altura e borda a direita*/
+            height: 120px;
+            margin-right: 10px ;
+        } 
+
+        .navbar a{
+          /*definindo margem, cor, tamanho da fonte, intensidade do negrito e alinhando ao centro*/
+            margin: 10px;
+           color: #fff;
+           font-size: 16px;
+           font-weight: 500; 
+           text-align: center; 
+        }
+
+        .navbar i{
+          /*definindo tamanho da fonte e espaçamento a direita*/
+            font-size: 18px;
+            padding-right: 5px; 
+        }
+
+        .navbar a:hover{
+          /*definindo cor, cor do plano de fundo e bordas arredondadas*/
+            color: rgba(205, 4, 14);
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .navbar-toggler{
+          /*definindo cor*/
+            color: #fff;
+        }
+
+        .navbar-toggler-icon i  {
+          /*definindo cor e tamanho da fonte*/
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .navbar .active{
+          /*definindo cor de plano de fundo, cor e bordas arredondadas*/
+          background-color: #fff;
+          color: rgba(205, 4, 14);
+          border-radius: 5px;
+        }
+
+        .class{
+          /*definindo cor*/
+            color: rgba(0, 95, 202);
+        }
+
+        .carousel-inner{
+          /*definindo largura e bordas arredondadas*/
+          width: 50rem;
+          border-radius: 25px;
+        }
+
+        .cards-title h4{
+            margin: 20px 0px; /*definindo o espaçamento entre esse elemento e o anterior*/
+            background-color: rgba(205, 4, 14); /*definindo cor de plano de fundo*/
+            padding: 15px; /*adicionando um espaçamento de 15px*/
+            color: #fff; /*definindo uma cor*/
+            width: 59rem; /*formatando a largura*/
+            border-radius: 10px; /*arredondando as bordas em 10px*/
+            text-align: center; /*alinhando ao centro*/
+        }
+
+        .cards .card{
+          /*Espaçamento no card do tópico game*/
+          margin: 10px;
+        }
+
+        .hover-card{
+            /*Definindo a posição como absolute para posicionar sobre o card*/
+            position: absolute;
+            /* Top e left necessários para isso*/
+            top: 10px; 
+            left: 10px;
+            /*largura e altura*/
+            width: 18rem;
+            height: 19rem;
+            border-radius: 5px; /*adicionando borda arredondada em 5px*/
+            visibility:hidden; /*Escondendo a div para aparecer apenas no hover*/
+            background-color:  rgba(0, 95, 202, .6); /*definindo cor de plano de fundo com uma opacidade para ver a imagem do card*/
+        }
+
+        .hover-text {
+            width: 18rem; /*definindo altura*/
+            text-align: center; /*alinhando no centro*/
+            background-color: rgba(205, 4, 14); /*definindo cor de plano de fundo*/
+            border-radius: 25px 25px 5px 5px; /*adicionando bordas arredondadas e formatando-a com valores para cima, direita, baixo e esquerda, respectivamente*/
+            padding: 10px 0px; /*aplicando espaçamento horizontalmente e verticalmente*/
+            color: #fff; /*definindo cor*/
+            font-size: 18px; /*tamanho da fonte*/
+            transition: .3s linear; /*tempo de transição para o efeito ao passar o mouse*/
+        }
+
+        .hover:hover .hover-card{
+            visibility: visible; /*O div hover aparecer quando passar o mouse pela class .hover*/
+        }
+
+        .hover:hover .hover-text{
+            transform: translateY(-2px); /*Efeito de subida do texto*/
+            height: 4rem; /*definindo nova altura após efeito*/
+        }
+
+        .more{
+          border-radius: 25px; /*definindo bordas arredondadas*/
+          width: 150px; /*definindo largura*/
+          padding: 15px 25px; /*definindo espaçamentos verticalmente e horizontalmente*/
+          border: 2px solid rgba(116, 119, 126); /*definindo borda solida e cor da borda*/
+          margin-top: 20px; /*definindo margem do topo*/
+          margin-right: 20px;
+          
+        }
+
+        .card-bio{
+       /*Arredondando bordas*/
+        border-radius: 10px;
+      }
+
+      .card-header{
+        /*Tamanho da fonte dos cabeçalhos dos cards*/
+        font-size: 25px;
+    }
+
+    /*Fundo para os icones no cabeçalhos dos cards*/
+    .fundo-title{
+        /*Definindo cor de fundo, largura, altura e margem para direita*/
+        background: rgba(205, 4, 14);
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    
+    .fundo-title i{
+        /*Definindo cor dos icones e tamanho deles*/
+        color: #fff;
+        font-size: 20px;
+    }
+    .jogos{
+      width: 59rem;
+    }
+      
+        @media screen and (max-width:768px){
+          /*Adaptando o carrossel a telas menores*/
+          .carousel-inner{
+            width: 100%;
+          }
+        }
+   

@@ -1,0 +1,422 @@
+*{
+    /*Formatações para auxiliar no desenvolvimento da página*/
+    /*Definindo espaçamentos como 0*/
+    margin: 0;
+    padding: 0;
+   
+    
+}
+body{
+    /*Definindo um background para o body*/
+    background-color: rgba(205, 4, 14);
+}
+
+.navbar{
+    /*Definindo cor de fundo para o nav*/
+    background-color: rgba(205, 4, 14);
+    
+    
+}
+/*Definindo altura dos icons igual do navbar e espaçamento entre eles*/
+.icon{
+    height: 120px;
+    margin-right: 10px ;
+} 
+.navbar a{
+    /*Formatando os links do navbar*/
+    /*Alinhando no centro*/
+    text-align: center;
+    /*espaçamento, cor, tamanho e espessura*/
+    margin: 10px;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 500;  
+}
+.navbar i{
+    /*tamanho e espaçamento dos awesomes do navbar*/ 
+    font-size: 18px;
+    padding-right: 5px; 
+}
+.navbar a:hover{
+    /*hover nos links do navbar*/
+    /*efeito de inversão de cores*/
+    color: rgba(205, 4, 14);
+    background-color: #fff;
+    border-radius: 5px;
+}
+.navbar-toggler{
+    /*Definindo cor do toggle que aparece em telas menores, nesse caso mexe na borda*/
+    color: #fff;
+    background-color:blue;
+
+}
+.navbar-toggler-icon i  {
+    /*Definindo cor do toggle que aparece em telas menores, nesse caso formatando diretamente o link*/
+    color: #fff;
+    font-size: 25px;
+    
+}
+.navbar .active{
+    /*Definindo uma classe active para o link que está sendo acessado*/
+    /*Mesmo efeito do hover*/
+    background-color: #fff;
+    color: rgba(205, 4, 14);
+    border-radius: 5px;
+ }
+
+.mario  {
+    /*Definindo Altura e largura da classe*/
+   height: 780px;
+   width: 100%;
+   /*Definindo background, tamanho do background e bordas para a classe*/
+    background:url(../img/background-me.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 10px 10px;
+ 
+
+}
+
+.card-insta{
+    /*Definindo altura e largura do card*/
+    width: 260px;
+    height: 700px;
+    /*Arrendondando bordas e definindo a posição com relativa para posicionar mais abaixo da posição inicial*/
+    border-radius: 20px;
+    position: relative;
+    top: 250px; /*medida de distanciamento do topo*/
+    /*Fundo do card, cor da fonte do card e uma margem para esquerda*/
+    background-color: #fff;
+    color: rgba(116, 119, 126);
+    margin-left: 20px;
+    
+    }
+
+    /*Parte de cima do cartão*/
+    .carton-top{
+        /*position relative porque alguns itens vão receber position absolute para relacionar com esse card-top*/
+        position: relative;
+        /*Definindo largura, altura, arrendondando bordas e cor de fundo*/
+        height: 440px;
+        width: 100%;
+        border-radius:  20px;
+        background-color: #fff;
+        /*Sobrepondo para efeito de border por cima da parte inferior*/
+        z-index: 999;
+    }
+    .profile-card{
+        /*position relative porque alguns itens vão receber position absolute para relacionar com esse profile-card*/
+        position: relative;
+    }
+    .border-profile{
+        /*Definindo altura, largura, cor de fundo e deixando a classe com formato de circulo*/
+        height: 160px;
+        width: 160px;
+        background-color: #fff;
+        border-radius: 50%;
+        /*Position absolute para colocar a classe mais para cima e deixar mais elegante*/
+        position: absolute;
+        bottom: -90px;
+        
+    }
+    .border-profile img{
+        /*Definindo altura, largura e a classe como formato de circulo*/
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+    .online{
+        /*Definindo largura, altura e a classe como formato de circulo*/
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        /*Cor de fundo e posicionando a classe sobre a borda para design de online*/
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 160px;
+        z-index: 999;
+    }
+    .bolinha-verde{
+        /*Altura e largura um pouco menor que a classe anterior para aspecto de borda e também redonda*/
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        /*Cor de fundo e sobreposição*/
+        background-color: #2ecc71;
+        z-index: 999;
+    }
+    .name{
+        /*Alinhando texto no centro e definindo um margin-top de 100px, caso contrário, ficaria sob a imagem*/
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .Qseguidores{
+        /*Alinhando texto no centro*/
+        text-align: center;
+        
+    }
+    .Qseguidores h4{
+        /*Definindo cor do título de .Qseguidores*/
+        color: rgba(205, 4, 14);
+    }
+    .Qvisu{
+        /*Espaçamento para esquerda de 20px e alinhando texto no centro*/
+        margin-left: 20px;
+        text-align: center;
+    
+    }
+    .Qvisu h4{
+        /*Definindo cor do h4 de .Qvisu*/
+        color: rgba(205, 4, 14);
+    }
+
+    .seguir{
+        /*Definindo cor de fundo, cor da fonte, arrendondando as bordas, retirando as bordas padrões dos botões e organizando o espaçamento interno*/
+        background-color: rgba(205, 4, 14);
+        color: #fff;
+        border-radius: 15px;
+        border:none;
+        padding: 8px 25px;
+    }
+    .conectar{
+        /*Definindo cor de fundo, cor da fonte, arrendondando as bordas*/
+        background-color: #fff;
+        color: rgba(116, 119, 126);
+        border-radius: 15px;
+        /*definindo tamanho,formato e cor da borda*/
+        border:2px solid rgba(205, 4, 14);
+        margin-left: 10px; /*Espaçamento do botão anterior*/
+        padding: 6px 20px;  /*organizando o espaçamento interno*/
+    }  
+    .card-bottom{
+        /*Parte de baixo do card-insta*/
+        /*Definindo altura e largura do card*/
+        height: 400px;
+        width: 100%;
+        /*Formatando background, bordas*/
+        background: url(../img/backgroundCard.jpg) no-repeat;
+        border-radius: 0px 0px 20px 20px;
+        /*Position relative para subir a class e atingir o efeito pretentido*/
+        position: relative;
+        top: -15px;
+        
+    }
+    .title{
+        /*alinhando texto no centro, definindo cor e margin do top e formatando o tamanho da fonte*/
+        text-align: center;
+        color: #fff;
+        margin-top: 25px;
+        font-size: 18px;
+    }
+    .contents {
+        /*Definindo Largura*/
+        width: 100%;
+
+    }
+    .content{
+        /*Definindo altura e largura do content*/
+        height: 50px;
+        width: 220px;
+        /*Arredondando bordas, definindo cor de fundo e espaçamento do topo*/
+        border-radius: 10px;
+        background-color: #fff;
+        margin-top: 10px;
+    
+    }
+    .img-content{
+        /*Definindo largura do div que fica localizado a imagem do content*/
+        width: 50px;
+    }
+    .img-content img{
+        /*Definindo largura e altura, Deixando circular e margem para esquerda*/
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        margin-left:10px ;
+
+    }
+    .title-content{
+        /*Definindo largura e margem para esquerda*/
+        width: 180px;
+        margin-left: 20px;
+    }
+    .title-content h4{
+        /*Definindo h4 da classe .title-content*/
+        /*Formatando tamanho da fonte, e espaçamento para baixo e para cima*/
+        font-size: 18px;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    .legenda{
+        /*Definindo tamanho da fonte da classe .legenda*/
+        font-size: 8px;
+    }
+    .star i{
+        /*Formatando as estrelas da classe content*/
+        /*Definindo cor, tamanho da font, espaçamento interno para direita e espaçamento externo para o top*/
+        color: #f1c40f;
+        font-size: 15px;
+        padding-right: 5px;
+        margin-top: 3px;
+    }
+    .lado-direito{
+        /*Definindo largura do lado direito*/
+        /*Foi calculado a largura disponível menos os 260px do card-insta*/ 
+        width: calc(100% - 260px);
+        
+    }
+
+    .card-comp{
+        /*Posicionando o card de competências*/
+        position: relative;
+        top: 230px;
+        /*Definindo margem para a esquerda e arredondando bordas do card-comp*/
+        margin-left: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .card-body-comp{
+        /*Definindo margem do corpo do card-comp*/
+        margin: 10px 0px 0px 40px;
+    }
+    
+    /*São as estrelas do card-comp*/
+    .card-body-comp i{
+        /*Definindo margin para cima, para esquerda e formatando cor*/ 
+        margin-top: 4px;
+        margin-left: 4px;
+        color: #f1c40f;
+        
+    }
+    /*São as estrelas, porém apagadas*/
+    i.apagada{
+        /*Definindo cor*/
+        color: #636e72;
+    }
+
+    .card-bio{
+        /*Posicionando o card da biografia*/
+        position: relative;
+        top: 230px;
+        /*Definindo espaçamento para esquerda e arredondando as bordas*/
+        margin-left: 20px;
+        border-radius: 10px;
+    }
+    .cards-perso{
+        background: url(../img/backgroundme4.jpg) no-repeat; /*Definindo background, e formatando o mesmo para não repetir*/
+        background-size: 100% 100%; /*definindo o tamanho do background*/
+       
+    }
+    .card-friends{
+        /*Definindo margin e arredondando as bordas*/
+        margin-left: 300px;
+        border-radius: 10px;
+        margin-top: 20px;
+        
+    }
+    .card{
+        /*Definindo margin para os cards*/
+        margin: 1px;
+    }
+    .card-header{
+        /*Tamanho da fonte dos cabeçalhos dos cards*/
+        font-size: 25px;
+        
+    }
+    /*Fundo para os icones no cabeçalhos dos cards*/
+    .fundo-title{
+        /*Definindo cor de fundo, largura, altura e margem para direita*/
+        background: rgba(205, 4, 14);
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    .fundo-title i{
+        /*Definindo cor dos icones e tamanho deles*/
+        color: #fff;
+        font-size: 20px;
+    }
+    /*Definindo alguns backgrounds individuais dos modais*/
+    #Bowser .modal-content{
+    background-color: #e67e22;
+    }
+    #Yoshi .modal-content{
+    background-color: #60f04a;
+    }
+
+/*Responsividade para mobiles*/
+    /*Provavelmente a maioria da entrada no site caso houver compartilhamento será nesses dispositivos*/
+    @media screen and (max-width: 768px){
+        body { 
+            background: none; /*retirando background*/
+            background-color: #fff ; /*background na cor branca*/
+        }
+         .mario{
+             flex-direction: column;
+             justify-content: center; /*alinhando os itens em direção ao centro*/
+             align-items: center; /*colocando os itens ao centro*/
+             height: auto; 
+             width: 100%; /*definindo largura*/
+             background-size: contain;
+         }
+         .card-insta{
+             /*definindo topo e margem*/
+             top: 180px;
+             margin:0;
+         }
+         .lado-direito{
+             display: flex;
+             justify-content: center;
+             flex-direction: column;
+             align-items: center;
+             width: 100%; /*definindo largura*/
+         }
+         .card-bio{
+             /*definindo largura, margem e topo*/
+             width: 260px;
+             margin:0;
+             top: 210px;
+         }
+         .card-comp{
+             /*definindo altura, largura, margem, topo e bordas solidas na cor preta*/
+             height: 14rem;
+             width: 260px;
+             margin: 0;
+             top: 210px;
+             border: 1px solid black;
+         }
+         .card-body-comp{
+             /*definindo margem*/
+            margin: 5px;
+         }
+         .card-comp .card-text {
+             /*alinhando ao centro e definindo largura*/
+             text-align: center;
+             width: 100px;
+         }
+         .ladinho{
+             width: 18rem; /*definindo largura*/
+             flex-direction: column; /*Direcionar como coluna*/
+         }
+         .cards-perso{
+             margin-top: 210px; /*definindo margem do topo*/
+             background: none; /*retirando background*/
+             justify-content: center;
+         }
+         .cards{
+             justify-content: center; /*justificar conteudo no centro e o flex wrap para quebrar linha quando não couber no espaço*/
+             flex-wrap: wrap;
+         }
+         .card-friends{
+             /*Alinhar no centro na horizontal e vertical*/
+             align-items: center;
+             justify-content: center;
+             margin: 0; /*definindo margem*/
+             width: 16rem; /*definindo largura*/
+         }
+         .card-friends .card{
+             /*definindo margem*/
+             margin: 3px;
+         }
+     }

@@ -1,0 +1,119 @@
+*{
+    /*Deixar o padding e margin de toda página zero para colocar as formatações pretendidas*/
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar{
+    /*Formatando cor de plano de fundo do navbar*/
+    background-color: rgba(205, 4, 14);
+
+}
+.icon{
+    /*Formatando altura e espaçamento a direita dos icons*/
+    height: 120px;
+    margin-right: 10px ;
+} 
+
+.navbar a{
+    /*Alinhando no centro*/
+    text-align: center;
+    /*Definindo uma margem, cor, tamanho da fonte e a intensidade do negrito*/
+    margin: 10px;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 500;
+   padding-left: 10px;  /*Espaçamento para a esquerda*/ 
+}
+.navbar i{
+    /*Definindo o tamanho da fonte e espaçamento a direita*/
+    font-size: 18px;
+    padding-right: 5px; 
+}
+.navbar a:hover{
+    /*formatando a cor, a cor de plano de fundo e adicionando bordas arredondadas com 5px*/
+    color: rgba(205, 4, 14);
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+.navbar-toggler{
+    /*definindo a cor, nesse caso na borda*/
+    color: #fff;
+}
+.navbar-toggler-icon i  {
+    /*definindo a cor e o tamanho da fonte, nesse caso no icone em si*/
+    color: #fff;
+    font-size: 25px;
+    
+}
+
+.navbar .active{
+    /*classe active para o link que está sendo acessado*/
+    /*efeito de inversão de cores*/
+   background-color: #fff;
+   color: rgba(205, 4, 14);
+   border-radius: 5px;
+}
+.card{
+    /*definindo margem*/
+    margin: 20px
+}
+
+.card-footer i{
+    /*definindo tamanho da fonte e margem*/
+    font-size: 20px;
+    margin: 5px 20px;
+}
+.card-footer .fa-whatsapp:hover{
+    color: #2ed573; /*definindo cor*/
+    transform: scale(1.5);  /*aumentar a escala ao passar o mouse*/
+}
+.card-footer .fa-facebook-f:hover{
+    color: #0984e3; /*definindo cor*/
+    transform: scale(1.5);  /*aumentar a escala ao passar o mouse*/
+}
+.card-footer .fa-instagram:hover{
+    color: #cd84f1; /*definindo cor*/
+    transform: scale(1.5); /*aumentar a escala ao passar o mouse*/
+}
+#hover-insta-isa{
+    display: none; /*Escondendo para mostrar apenas no mouse over pelo js*/
+    top: -40px; /*top e left necessários para posicionar o card*/
+    transition: 1s linear; /*Tempo de duração de 1 segundo tanto para esconder quanto para mostrar*/
+    z-index: 999; /*Para ficar sobreposta*/
+}
+#hover-insta-luiz{
+    display: none; /*Escondendo para mostrar apenas no mouse over pelo js*/
+    top: -40px; /*top e left necessários para posicionar o card*/
+    transition: 1s linear; /*Tempo de duração de 1 segundo tanto para esconder quanto para mostrar*/
+    z-index: 999; /*Para ficar sobreposta*/
+}
+.title-cab{
+    margin-top: 5px; /*espaçamento em relação ao topo*/
+}
+.image{
+    width: 90px; /*Definindo largura da classe*/
+}
+.image img{
+    /*Definindo largura, altura e com formato redondo*/
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.card-images{
+    border-radius: 10px; /*Border radius de 10px para arrendondar*/
+}
+.image-body{
+    /*Definindo largura e altura*/
+    width: 133px;
+    height: 150px;
+    
+    
+}
+.image-body img{
+    /*Definindo largura e altura das imagens do image-body*/
+    width: 130px;
+    height: 180px;
+}

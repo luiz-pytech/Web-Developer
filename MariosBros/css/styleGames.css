@@ -1,0 +1,111 @@
+*{
+    /*Deixar o padding e margin de toda página zero para colocar as formatações pretendidas*/
+    margin: 0;
+    padding: 0;
+    
+}
+
+.navbar{
+    /*Formatando cor de plano de fundo do navbar*/
+    background-color: rgba(205, 4, 14);
+ 
+    
+}
+.icon{
+    /*Formatando altura e espaçamento a direita dos icons*/
+    height: 120px;
+    margin-right: 10px ;
+} 
+.nav-item {
+   margin-left: 5px; /*Margin para esquerda de 5px*/
+}
+.navbar a{
+    /*Alinhando no centro*/
+    text-align: center;
+    /*Definindo uma margem, cor, tamanho da fonte e a intensidade do negrito*/
+    margin: 10px;
+   color: #fff;
+   font-size: 16px;
+   font-weight: 500;
+   padding-left: 10px;  /*espaçamento para esquerda*/
+}
+.navbar i{
+    /*Definindo o tamanho da fonte e espaçamento a direita*/
+    font-size: 18px;
+    padding-right: 5px; 
+}
+.navbar a:hover{
+    /*formatando a cor, a cor de plano de fundo e adicionando bordas arredondadas com 5px*/
+    color: rgba(205, 4, 14);
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+.navbar-toggler{
+    /*definindo a cor, nesse caso na borda*/
+    color: #fff;
+}
+.navbar-toggler-icon i  {
+    /*definindo a cor e o tamanho da fonte, nesse caso no icone em si*/
+    color: #fff;
+    font-size: 25px;
+    
+}
+
+.navbar .active{
+    /*classe active para o link que está sendo acessado*/
+    /*efeito de inversão de cores*/
+   background-color: #fff;
+   color: rgba(205, 4, 14);
+   border-radius: 5px;
+}
+
+.cards-title h4{
+    margin-top: 20px; /*definindo o espaçamento entre esse elemento e o anterior*/
+    background-color: rgba(205, 4, 14); /*definindo cor de plano de fundo*/
+    padding: 15px; /*adicionando um espaçamento de 15px*/
+    color: #fff; /*definindo uma cor*/
+    width: 59rem; /*formatando a largura*/
+    border-radius: 10px; /*arredondando as bordas em 10px*/
+    text-align: center; /*alinhando ao centro*/
+}
+.card{
+    /*adicionando uma margem*/
+    margin: 20px;
+    
+}
+.hover-card{
+    /*Definindo a posição como absolute para posicionar sobre o card*/
+    position: absolute;
+    /* Top e left necessários para isso*/
+    top: 20px; 
+    left: 20px;
+    /*largura e altura*/
+    width: 18rem;
+    height: 19rem;
+    border-radius: 5px; /*adicionando borda arredondada em 5px*/
+    visibility:hidden; /*Escondendo a div para aparecer apenas no hover*/
+    background-color:  rgba(0, 95, 202, .6); /*definindo cor de plano de fundo com uma opacidade para ver a imagem do card*/
+}
+.hover-text {
+    width: 18rem; /*definindo altura*/
+    text-align: center; /*alinhando no centro*/
+    background-color: rgba(205, 4, 14); /*definindo cor de plano de fundo*/
+    border-radius: 25px 25px 5px 5px; /*adicionando bordas arredondadas e formatando-a com valores para cima, direita, baixo e esquerda, respectivamente*/
+    padding: 10px 0px; /*aplicando espaçamento horizontalmente e verticalmente*/
+    color: #fff; /*definindo cor*/
+    font-size: 18px; /*tamanho da fonte*/
+    transition: .3s linear; /*tempo de transição para o efeito ao passar o mouse*/
+    
+}
+.hover:hover .hover-card{
+    visibility: visible; /*O div hover aparecer quando passar o mouse pela class .hover*/
+    
+}
+.hover:hover .hover-text{
+    transform: translateY(-2px); /*Efeito de subida do texto*/
+    height: 4rem; /*definindo nova altura após efeito*/
+}
+
+
+

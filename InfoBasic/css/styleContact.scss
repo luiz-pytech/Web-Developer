@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import '_variables';
+@import 'functionStyle';
+
+@include StartPag();
+*{
+    font-family: 'Roboto';
+}
+
+.inner-width {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding: 20px;
+        a{
+            text-decoration: none;
+        }
+}
+
+.profiles-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: $verdeLogo;
+    border-radius: 10px;
+    height: 620px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: $white;
+    margin: 20px;
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+}
+
+.profile-about {
+    /*Display flex para justificar e alinhar no centro*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*direção de coluna para ficar um abaixo do outro*/
+    flex-direction: column;
+    width: 100%;
+        h3{
+            color: $white;
+            font-size: 2.6rem;
+            font-weight: bolder;
+        }
+        h4{
+            color: $black1;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            font-style: italic;
+            margin: 10px 0;
+        }
+}
+
+.profile-social-media {
+    width: 50%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+        i{
+            font-size: 2.5rem;
+            color: $black1;
+            transition: .3s linear;  
+            &:hover{ 
+                transform: scale(1.2);
+                color: $white;
+            }
+        }
+}
+
+.curriculo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        p{
+            font-size: .8rem;
+            color: $black1;
+            font-weight: bolder;
+        }
+}
+
+
+.profile-contact {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $black1;
+    border-radius: 10px;
+    width: 60%;
+    height: 10%;
+    cursor: pointer;
+    transition: .2s linear;
+    &:hover {
+        background-color: $white;
+        border: 2px solid $white;
+    }
+    &:hover .link{
+        color: $black1;
+    }
+        a{
+            font-size: 20px;
+            color: $black1;
+            font-weight: bolder;
+        }
+        i{
+            color: $black1;
+            font-size: 22px;
+        }
+}
+
+
+.profile-text {
+    text-align: justify;
+    padding: 30px 40px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.profile-text p {
+    font-weight: bolder;
+}
+.nada{
+    height: 120px;
+    width: 100%
+}
+
+@media screen and (max-width: 780px){
+    .inner-width {
+        height: 240vh;
+    }
+    .profiles-screen {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,74 @@
+*{
+    /*Formatações para auxiliar no desenvolvimento da página*/
+    /*Definindo o box-sizing como border box e os espaçamentos como 0*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh; /*definindo altura*/
+    display: flex; /*display flexivel*/
+   
+}
+.dialog{
+    background-color:  rgba(0, 95, 202, .7); /*definindo cor de plano de fundo*/
+    position: fixed; /*o elemento ficará fixo nessa mesma posição, independente de mexer na barra de rolagem*/
+    top: 0; /*alterando tamanho do topo, esquerda, direita e parte de baixo*/
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /*display flexivel*/
+    justify-content: center; /*os itens são alinhados ao centro*/
+    align-items: center; /*alinhando no centro*/
+}
+#cardbord{
+    /*definindo largura e altura*/
+    width: 960px;
+    height: 420px;
+    margin: auto; /*margem auto para centralizar*/
+    display: flex; /*display flexivel*/
+    justify-content: center;
+    flex-wrap: wrap; /*os itens flexiveis são quebrados em multiplas linhas*/
+    
+}
+.memory-card{
+    /*definindo largura e altura*/
+    width: 150px;
+    height: 200px;
+    margin: 5px; /*definindo a margem*/
+    position: relative; /*A frente e as costas do card recebem position absolute. E necessitam ficar relativo a alguma coisa, nesse caso o memory card*/
+    transform-style: preserve-3d; /*Preservando o 3d no card para o efeito da animação*/
+    transition: .3s; /*tempo de transição*/
+    
+}
+.memory-card:active{
+    transform: scale(1.1); /*Transform para quando o card for clicado, aumentando a escala*/
+}
+.memory-card.flip{
+    transform: rotateY(180deg); /*rotacionar o card em 180 graus*/
+}
+img{
+    border-radius: 20px; /*bordas arredondadas*/
+    border: 2px solid red; /*definindo bordas solidas na cor vermelha*/
+    width: 200px; /*definindo largura*/
+    height: 380px; /*definindo altura*/
+}
+.front, .back{
+    width: 100%; /*definindo largura*/
+    height: 100%; /*definindo altura*/
+    position: absolute; /*Posicionando de forma absoluta, em relação ao memory-card*/
+}
+.front{
+    transform: rotateY(180deg); /*rotacionando a frente do cartão em 180 graus*/
+    
+}
+.fa-times{
+    /*definindo tamanho da fonte e cor*/
+    font-size: 36px;
+    color: #fff;
+}
+@media screen and (max-width: 768px){
+    .dialog{
+        overflow: scroll;
+    }
+}

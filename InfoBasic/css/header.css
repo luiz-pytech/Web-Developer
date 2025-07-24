@@ -1,0 +1,109 @@
+header {
+  width: 100%;
+  background-color: #101010;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+/*Config navbar*/
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.logo img{
+  height: 80px;
+  object-fit: cover;
+}
+
+.hambuguer {
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  position: relative;
+  display: none;
+  z-index: 999;
+}
+
+.hambuguer:before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 40%;
+  height: 10%;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 1s ease;
+}
+
+.hambuguer:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 70%;
+  height: 10%;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 1s ease;
+}
+
+#hambuguer {
+  display: none;
+}
+
+#hambuguer:checked ~ label .hambuguer:after {
+  transform: rotate(225deg);
+  top: 45%;
+  left: 15%;
+}
+
+#hambuguer:checked ~ label .hambuguer:before {
+  transform: rotate(-405deg);
+  width: 70%;
+  height: 10%;
+  top: 45%;
+  left: 15%;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.menu li {
+  margin-left: 10px;
+}
+.menu li a {
+  font-size: 20px;
+  display: block;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: #555;
+  font-family: "Prompt";
+  transition: 0.5s ease;
+}
+.menu li a:hover {
+  color: #00ff7d;
+}
+.menu li a.active {
+  color: #fff;
+  background-color: #00ff7d;
+  border-radius: 10px;
+}

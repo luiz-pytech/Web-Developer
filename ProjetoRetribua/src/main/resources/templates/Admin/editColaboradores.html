@@ -1,0 +1,171 @@
+	<!DOCTYPE html>
+	<html lang="pt" 
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv= "X-UA-Compatible" content= "IE=edge" />
+		<meta name="viewport" content= "width=device-width, initial-scale = 1, shrink-to-fit=no" />
+		   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	
+	    <link rel="sortcut icon" href="static/img/icon.png" type="image/png" />
+	    <link rel="stylesheet" href="css/style.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+		
+		<title>Crud Colaboradores</title>
+		
+		<style type="text/css">
+			body{
+			height: 100vh;
+			}
+			h6 {
+			  font-size: 40px;
+			  line-height: 160%;
+			}
+			.navbar{
+				background: #198754;
+				height: 120px;
+			}
+			.list-group{
+				width: 180px;
+				top:0;
+				z-index:999;
+				box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+			}
+			.list-group ul{
+				width: 60px;
+				top:0;
+				left:0;
+				z-index:999;
+				box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+			}
+			.list-group button{
+				border:none;
+			}
+			.list-group i{
+				font-size:18px
+			}
+			.edit-salve{
+	            height: 630px;
+	            width: 350px;
+	            background-color: #198754;
+	            color: #fff;
+	            border-bottom-left-radius: 20px;
+	            border-top-left-radius: 20px;
+	            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+	        }
+	        .edit-items{
+	            height: 630px;
+	            width: 550px;
+	            padding: 40px;
+	            
+	        }
+	        .edit-items input,.edit-items select{
+	           box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+	        }
+	        span {
+			  font-family: "Barlow Condensed", sans-serif;
+			  color: #198754;
+			  font-size: 22px;
+			}
+			p {
+				color: #198754;
+			  font-size: 22px;
+			  line-height: 180%;
+			}
+		</style>
+		
+	</head>
+	<body class="d-flex justify-content-center align-items-center" >
+	
+		<div class="d-flex">
+                    <div class="edit-salve d-flex justify-content-around align-items-center flex-column">
+                        <h6 style="color:#fff">Edit Item </h6>
+                        <div class="row mt-9">
+                            <a href="/cruds/crudCollabe" class="btn btn-danger btn-lg mb-2" >Cancel</a>
+                          
+                        </div>
+                    </div>
+                    <div class="edit-items d-flex justify-content-center align-items-center">
+                    
+                        <form th:action="@{/salvar}" th:object="${usuario}" method="post">
+								
+							<input type="hidden" th:field="${usuario.id}">
+                            <div class="mb-3">
+                                <label for="nome" class="form-label"><span class="ml-2">Nome Completo:<span></label>
+                                    <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+                                    <div class="input-group">
+                                      <div class="input-group-text"><i class="bi bi-person"></i></div>
+                                      <input type="text" th:field="${usuario.nome}" class="form-control form-control-lg" id="specificSizeInputGroupUsername" placeholder="Nome Completo">
+                                    </div>
+                              </div>
+            
+                              <div class="mb-3">
+                                <label for="email" class="form-label"><span class="ml-2">Email: <span></label>
+                                    <label class="visually-hidden" for="specificSizeInputGroupUsername">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text"><i class="bi bi-envelope"></i></div>
+                                        <input type="email" th:field="${usuario.email}" class="form-control form-control-lg" id="specificSizeInputGroupUsername" placeholder="exemplo123@gmail.com">
+                                    </div>
+                                </div>
+                                  <div class="mb-3">
+			                    <label for="password" class="form-label"><span class="ml-2">Senha <span></label>
+			                    <label class="visually-hidden">Password:</label>
+			                        <div class="input-group">
+			                            <div class="input-group-text"><i class="bi bi-lock"></i></div>
+			                            <input type="password" th:field="${usuario.senha}" class="form-control form-control-lg" id="specificSizeInputGroupUsername" placeholder="Digite sua senha ou crie uma nova">
+			                        </div>
+			                  </div>
+			                     <div class="mb-3">
+			                    <label for="password" class="form-label"><span class="ml-2">Confirmar Senha <span></label>
+			                    <label class="visually-hidden">Password:</label>
+			                        <div class="input-group">
+			                            <div class="input-group-text"><i class="bi bi-lock"></i></div>
+			                            <input type="password" th:field="${usuario.confirmSenha}" class="form-control form-control-lg" id="specificSizeInputGroupUsername" placeholder="Confirmar sua senha">
+			                        </div>
+			                  </div>
+            
+                              <div class="row d-flex">
+                                <div class="col-md-6">
+                                    <label for="inputCity" class="form-label"><span class="ml-2">Cidade <span></label>
+                                        <label class="visually-hidden" for="inputCity">Cidade</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="bi bi-geo-alt"></i></div>
+                                            <input type="text" th:field="${usuario.cidade}" class="form-control form-control-lg" id="inputCity" placeholder="Cidade">
+                                        </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputState" class="form-label"><span class="ml-2">Estado<span></label>
+                                    <select th:field="${usuario.estado}" id="inputState" class="form-select form-select-lg" >
+                                      <option value="">Estado</option>
+		                          		 <option th:each="e : ${estados}" th:text="${e}" th:value="${e}"></option>
+            
+                                    </select>
+                                  </div>
+                                 	 <div class="row mt-4 ml-4" style="font-size: 18px;">
+		                    		 <div class="col-12 mb-4" >
+		                    
+		                    			<select th:field="${usuario.funcao}" id="funcaoState" class="form-select form-select-lg">
+					                          <option value="">Função</option>
+					                          <option th:each="f : ${funcao}" th:text="${f}" th:value="${f}"></option>
+		                				</select>
+		                      	    </div>  
+                  				 </div>
+                  				 <div class="row mt-9">
+		                            
+		                            <button type="submit" class="btn btn-lg btn-outline-success" >Salvar Alterações</button>
+		                        </div>
+                                
+                          </form>
+                    </div>
+		
+		
+	</body>
+	</html>

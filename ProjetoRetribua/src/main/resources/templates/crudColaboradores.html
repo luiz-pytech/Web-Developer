@@ -1,0 +1,140 @@
+	<!DOCTYPE html>
+	<html layout:decorate="~{layout/layout}">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv= "X-UA-Compatible" content= "IE=edge" />
+		<meta name="viewport" content= "width=device-width, initial-scale = 1, shrink-to-fit=no" />
+		   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	
+	    <link rel="sortcut icon" href="img/icon.png" type="image/png" />
+	    <link rel="stylesheet" href="../css/style.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
+		<title>Crud Colaboradores</title>
+		
+		<style type="text/css">
+		
+			.navTop{
+			border-bottom: 2px solid #869ab8;
+			}
+			.list-group{
+				width: 160px;
+				top:0;
+				z-index:999;
+				box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+			}
+			.list-group ul{
+				width: 80px;
+				z-index:999;
+				box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+				color: #198754;
+			}
+			.list-group button{
+				border:none;
+			}
+			.list-group i, .list-group a{
+				font-size:18px;
+				color: #198754;
+				text-decoration:none;
+			}
+			.edit-salve{
+			    height: 600px;
+			    width: 350px;
+			    background-color: #198754;
+			    color: #fff;
+			    border-bottom-left-radius: 20px;
+			    border-top-left-radius: 20px;
+			    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+			}
+			 .edit-items{
+			    height: 600px;
+			    width: 550px;
+			    padding: 40px;                   
+			 }
+			 .edit-items input,.edit-items select{
+			    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+			 }
+			 p{
+			 	color: black;
+			 }
+		</style>
+		
+	</head>
+	<body>
+	<div layout:fragment="nav">
+		<nav class="navbar navbar-expand-lg navbar-light mb-5 ">
+			  <div class="container-fluid">
+			    <a class="navbar-brand" href="#"><h6 style="color:#fff">CRUD COLABORADORES</h6></a>
+			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			      <span class="navbar-toggler-icon"></span>
+			    </button>
+			    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			        
+			      </ul>
+			      <form class="d-flex" th:action="@{/cruds/buscar}" method="get">
+			        <input th:name="nome" class="form-control form-control-lg me-2" type="search" placeholder="Pesquisar colaborador" aria-label="Search" formmethod="get">
+			        <button class="btn btn-lg btn-dark" type="submit"><i class="fas fa-search"></i></button>
+			      </form>
+			    </div>
+			  </div>
+			</nav>
+	</div>
+	
+	<div layout:fragment="corpo">
+	
+		<div th:replace="fragments/mensagens">
+		
+		</div>
+	
+		
+			<div th:if="${not #lists.isEmpty(usuariosEncontrados)}" class="p-4">
+				<div class="table-responsive">
+				
+					<table class="table align-middle table-lg caption-top table-hover">
+					<caption><h4>List Collaborates</h4></caption>
+					  <thead>
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col" class="text-center">Foto</th>
+					      <th scope="col">Nome</th>
+					      <th scope="col">Email</th>
+					      <th scope="col">Cidade</th>
+					      <th scope="col" class="text-center">Estado</th>
+					      <th scope="col" class="text-center">Função</th>
+					       <th scope="col" class="text-center">Opções</th>
+					    </tr>
+					  </thead>
+					  <tbody class="align-middle">
+					    <tr th:each="u : ${usuariosEncontrados}">
+					      <th scope="row" th:text="${u.id}"></th>
+					      <td class="text-center">
+					      	<img id="img-table" th:if="${u.foto != null}" th:src="@{/download/} + ${u.foto.id} + 
+					'?salvar=false'"/>	
+					      </td>
+		
+					      <td><p th:text="${u.nome}"></p></td>
+					      <td><p th:text="${u.email}"></p></td>
+					      <td><p th:text="${u.cidade}"></p></td>
+					      <td class="text-center"><p th:text="${u.estado}"></p></td>
+					      <td class="text-center"><p th:text="${u.funcao}"></p></td>
+						 
+					      <td class="text-center">	
+								 <ul class="list-group list-group-horizontal">
+								  <li class="list-group-item"><a th:href="'/cruds/edit/' + ${u.id}"  class="d-flex flex-column align-items-center"><i class="bi bi-pen"></i>Edit</a></li>
+								  <li class="list-group-item"><a th:href="'/cruds/remover/' + ${u.id}" onclick="if (!confirm('Desejar remover o usuário?')) return false" class="d-flex flex-column align-items-center"><i class="bi bi-trash"></i>Remove</a></li>
+								</ul>
+								
+						 </td>
+					    </tr>
+					    
+					  </tbody>
+					</table>
+					</div>
+			</div>
+		</div>	
+	</body>
+	</html>

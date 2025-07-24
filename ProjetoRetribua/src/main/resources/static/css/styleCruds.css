@@ -1,0 +1,41 @@
+	.navbar{
+		background: #198754;
+		height: 120px;
+	}
+	.list-group{
+		width: 160px;
+		top:0;
+		z-index:999;
+		box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+	}
+	.list-group ul{
+		width: 80px;
+		z-index:999;
+		box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+		color: #198754;
+	}
+	.list-group button{
+		border:none;
+	}
+	.list-group i, .list-group a{
+		font-size:18px;
+		color: #198754;
+		text-decoration:none;
+	}
+	.edit-salve{
+	    height: 600px;
+	    width: 350px;
+	    background-color: #198754;
+	    color: #fff;
+	    border-bottom-left-radius: 20px;
+	    border-top-left-radius: 20px;
+	    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+	}
+	 .edit-items{
+	    height: 600px;
+	    width: 550px;
+	    padding: 40px;                   
+	 }
+	 .edit-items input,.edit-items select{
+	    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+	 }

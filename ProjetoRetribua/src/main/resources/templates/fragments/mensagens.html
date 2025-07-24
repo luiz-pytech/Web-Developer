@@ -1,0 +1,16 @@
+	<div class="alert alert-success" th:if="${msgSucess} != null">
+		<b th:text="${msgSucess}"> </b>
+	</div>
+	<div class="alert alert-danger" th:if="${msgsErro} != null">
+		<b th:each="m : ${msgsErro}">	<b th:text="${m}">
+							
+		</b>
+		</b>
+	</div>
+	
+	<div class="alert alert-danger" th:if="${msgErroLogin} != null">
+		<b th:each="m : ${msgErroLogin}">	<b th:text="${m}">
+							
+		</b>
+		</b>
+	</div>
